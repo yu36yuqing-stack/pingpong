@@ -1,0 +1,13 @@
+{
+  "miniprogramRoot": "miniprogram/",
+  "projectname": "pingpong-miniprogram",
+  "description": "Pingpong check-in mini program",
+  "appid": "wx4f70604d84002e04",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "uglifyFileName": true
+  }
+}

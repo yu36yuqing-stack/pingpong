@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="card">
+    <view class="row" style="justify-content:space-between; align-items:center;">
+      <view>
+        <view class="h">我的打卡</view>
+        <view class="p" wx:if="{{profile}}">{{profile.name}} · {{profile.role}}</view>
+      </view>
+      <button size="mini" bindtap="onLogout">退出</button>
+    </view>
+
+    <button class="primary" bindtap="onScanAndCheckin" loading="{{loading}}">扫码打卡</button>
+
+    <view class="section">
+      <view class="section-title">课程列表</view>
+      <view wx:if="{{courses.length===0}}" class="empty">暂无课程</view>
+      <view wx:for="{{courses}}" wx:key="courseId" class="course">
+        <view class="course-title">{{item.title}}</view>
+        <view class="course-sub">剩余次数：{{item.remainingSessions}}</view>
+        <view class="course-sub">地点：{{item.location}}</view>
+      </view>
+    </view>
+  </view>
+</view>

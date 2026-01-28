@@ -1,0 +1,9 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "乒乓打卡"
+  }
+}

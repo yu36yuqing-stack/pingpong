@@ -1,0 +1,12 @@
+.container{padding:24rpx}
+.card{background:#fff;border-radius:16rpx;padding:24rpx}
+.row{display:flex}
+.h{font-size:36rpx;font-weight:700}
+.p{margin-top:8rpx;color:#666;font-size:26rpx}
+.primary{margin-top:20rpx;background:#1677ff;color:#fff}
+.section{margin-top:26rpx}
+.section-title{font-size:28rpx;font-weight:700;margin-bottom:14rpx}
+.course{padding:16rpx 0;border-top:1px solid #eee}
+.course-title{font-size:28rpx}
+.course-sub{color:#666;font-size:24rpx;margin-top:6rpx}
+.empty{color:#888;font-size:26rpx;padding:12rpx 0}

@@ -1,0 +1,4 @@
+<view class="container">
+  <view class="title">乒乓打卡</view>
+  <button type="primary" bindtap="onWxLogin">微信一键登录</button>
+</view>
