@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="title">核销结果</view>
+
+  <view wx:if="{{ok}}" class="ok">成功</view>
+  <view wx:else class="fail">失败</view>
+
+  <view wx:if="{{qrCodeContent}}" class="block">
+    <view class="label">扫码内容</view>
+    <text class="mono">{{qrCodeContent}}</text>
+  </view>
+
+  <view wx:if="{{responseText}}" class="block">
+    <view class="label">后端返回</view>
+    <text class="mono">{{responseText}}</text>
+  </view>
+
+  <view wx:if="{{error}}" class="block">
+    <view class="label">错误</view>
+    <text class="mono">{{error}}</text>
+  </view>
+
+  <button type="primary" bindtap="backToScan">继续扫码</button>
+</view>

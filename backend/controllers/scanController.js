@@ -14,6 +14,9 @@ const checkin = async (req, res) => {
         const user = userRows[0];
         
         const now = new Date();
+        const nowValue = (process.env.DB_CLIENT || 'mysql').toLowerCase() === 'sqlite'
+            ? now.getTime()
+            : now;
 
         const [courseRows] = await db.query(`
             SELECT c.* FROM courses c
@@ -21,7 +24,7 @@ const checkin = async (req, res) => {
             WHERE (c.coach_id = ? OR cs.student_id = ?)
             AND c.start_time <= ? AND c.end_time >= ?
             AND c.status = 'SCHEDULED'
-        `, [userId, userId, now, now]);
+        `, [userId, userId, nowValue, nowValue]);
 
         const course = courseRows[0];
 

@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="title">登录</view>
+
+  <view class="card">
+    <view class="subtitle">Dev 登录（推荐 demo）</view>
+
+    <view class="form-item">
+      <text class="label">open_id</text>
+      <input class="input" value="{{open_id}}" data-field="open_id" bindinput="onInput" />
+    </view>
+
+    <view class="form-item">
+      <text class="label">name</text>
+      <input class="input" value="{{name}}" data-field="name" bindinput="onInput" />
+    </view>
+
+    <view class="form-item">
+      <text class="label">role</text>
+      <input class="input" value="{{role}}" data-field="role" bindinput="onInput" />
+    </view>
+
+    <view class="form-item">
+      <text class="label">balance</text>
+      <input class="input" type="number" value="{{balance}}" data-field="balance" bindinput="onInput" />
+    </view>
+
+    <button type="primary" loading="{{loading}}" bindtap="onDevLogin">Dev 登录</button>
+  </view>
+
+  <view class="card">
+    <view class="subtitle">微信登录（需要已配置小程序 AppID + 后端可换取 openid）</view>
+    <button bindtap="onWxLogin" loading="{{loading}}">微信登录</button>
+  </view>
+</view>

@@ -10,7 +10,7 @@ const getCourses = async (req, res) => {
             WHERE (c.coach_id = ? OR cs.student_id = ?)
         `, [userId, userId]);
         res.json(courseRows);
-    } catch (error)
+    } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Server error' });
     }

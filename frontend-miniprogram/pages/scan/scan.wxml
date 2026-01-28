@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="title">扫码核销</view>
+
+  <button type="primary" loading="{{scanning}}" bindtap="onScan">开始扫码</button>
+
+  <view style="height:24rpx"></view>
+
+  <button bindtap="onProfile">查看我的信息</button>
+  <button type="warn" bindtap="onLogout">退出登录</button>
+
+  <view class="hint">提示：真机调试请把 utils/config.js 里的 API_BASE 改成可访问的地址。</view>
+</view>

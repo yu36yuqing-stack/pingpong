@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="title">我的信息</view>
+
+  <view wx:if="{{loading}}">加载中...</view>
+  <view wx:if="{{error}}" class="fail">{{error}}</view>
+
+  <view wx:if="{{profile}}" class="block">
+    <view class="label">Profile</view>
+    <text class="mono">{{JSON.stringify(profile, null, 2)}}</text>
+  </view>
+
+  <view class="block">
+    <view class="label">Courses</view>
+    <text class="mono">{{JSON.stringify(courses, null, 2)}}</text>
+  </view>
+
+  <button bindtap="back">返回</button>
+</view>
