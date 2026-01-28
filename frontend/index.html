@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乒乓球馆教务核销系统 - 后台管理</title>
+</head>
+<body>
+    <h1>后台管理</h1>
+    <h2>用户导入</h2>
+    <form action="/admin/users/import" method="post" enctype="multipart/form-data">
+        <input type="file" name="userExcel" />
+        <button type="submit">上传并导入</button>
+    </form>
+
+    <h2>排课</h2>
+    <form id="schedule-form">
+        <label for="coach">教练:</label>
+        <input type="text" id="coach" name="coach" required><br><br>
+        <label for="student">学员:</label>
+        <input type="text" id="student" name="student" required><br><br>
+        <label for="start_time">开始时间:</label>
+        <input type="datetime-local" id="start_time" name="start_time" required><br><br>
+        <label for="end_time">结束时间:</label>
+        <input type="datetime-local" id="end_time" name="end_time" required><br><br>
+        <button type="submit">创建课程</button>
+    </form>
+
+    <script>
+        document.getElementById('schedule-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Basic validation and formatting would be needed here
+            
+            const response = await fetch('/admin/courses', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    // Authorization header would be needed
+                },
+                body: JSON.stringify(data),
+            });
+            
+            if (response.ok) {
+                alert('课程创建成功!');
+            } else {
+                alert('创建失败!');
+            }
+        });
+    </script>
+</body>
+</html>

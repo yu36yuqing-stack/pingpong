@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Course Management</h1>
+
+    <h2>Add New Course</h2>
+    <form id="add-course-form">
+        <input type="datetime-local" id="start-time" required>
+        <input type="datetime-local" id="end-time" required>
+        <input type="number" id="coach-id" placeholder="Coach ID" required>
+        <input type="text" id="student-ids" placeholder="Student IDs (comma-separated)">
+        <button type="submit">Add Course</button>
+    </form>
+
+    <h2>Courses</h2>
+    <table id="courses-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Coach ID</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
