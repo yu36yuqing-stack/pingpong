@@ -1,17 +1,18 @@
-# CURRENT_CONTEXT.md (Updated 2026-01-29 00:44)
+# CURRENT_CONTEXT.md (Updated 2026-01-29 01:30)
 
 ## Project: Pingpong
-- Repo: https://github.com/yu36yuqing-stack/pingpong (Java + Admin + Miniprogram)
-- Status: 
-  - Backend LIVE (https://pingpong.waitworld.com/auth/dev-login)
-  - Admin Frontend built (dist/ ready locally).
-  - GitHub backup COMPLETE.
-  - SSH Tunnel for Mac mini ACTIVE (ssh mac@139.196.84.63 -p 2222).
+- Backend: https://pingpong.waitworld.com (Online)
+- Admin UI: https://pingpong.waitworld.com (Fixed & Verified via GPT 5.2 deployment)
+- GitHub: https://github.com/yu36yuqing-stack/pingpong
+- Tunnel: FRP Active (139.196.84.63:2222 -> Local:22)
+- Anti-sleep: Caffeinate active.
 
-## Next Action
-- Deploy 'pingpong-admin/dist' to ECS port 22 (Nginx root).
-- Final Nginx config to serve Admin on / and Proxy API on / (or /api).
+## Active Tasks
+- [Maintenance] Monitoring GPT 5.2 as it completes Mini Program logic.
+- [Feature] Activating 'notion' and 'weather' skills.
+- [Reporting] Daily cost report script ready at '/Users/mac/clawd/scripts/report_costs.py'.
 
-## Constraints
-- 50k token rule ACTIVE.
-- Gemini 3 Flash (Strategy) + GPT 5.2 (Execution).
+## Strong Rules
+- Context threshold: 50k tokens (compression required).
+- PM: Gemini 3 Flash / Execution: GPT 5.2.
+- Direct execution for best solutions (don't ask, just do).
