@@ -1,60 +1,34 @@
+# 仓库说明
 
-# 乒乓球馆教务核销系统
+这个仓库历史上用于 `hello-java` 的示例（`HelloWorld.java`）。
 
-This project is a full-stack solution for a ping pong gym's course management and check-in system. It includes a backend API, a WeChat miniprogram for users, and an admin panel for management.
-
-## Features
-
-- **WeChat Login:** Users can log in using their WeChat account.
-- **QR Code Check-in:** Students and coaches can check in for courses by scanning a QR code.
-- **Course Management:** Admins can create, read, update, and delete courses.
-- **User Management:** (Implicitly managed through login, can be extended)
-- **Reporting:** (API endpoints designed, frontend not implemented)
-
-## Project Structure
-
-- `backend/`: Node.js backend with Express.
-- `frontend-miniprogram/`: WeChat miniprogram frontend.
-- `frontend-admin/`: Web-based admin panel.
-- `schema.sql`: SQL script to set up the database.
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js
-- MySQL
-- WeChat DevTools
-
-### Backend Setup
-
-1.  Navigate to the `backend` directory: `cd backend`
-2.  Install dependencies: `npm install`
-3.  Create a `.env` file and fill in your database and WeChat API credentials.
-4.  Set up the database using `schema.sql`.
-5.  Start the server: `npm start`
-
-### Miniprogram Setup
-
-1.  Open WeChat DevTools.
-2.  Import the `frontend-miniprogram` directory.
-3.  Update the API URL in `pages/index/index.js` to point to your backend server.
-4.  Run the miniprogram.
-
-### Admin Panel Setup
-
-1.  Open the `frontend-admin/index.html` file in your browser.
-2.  Update the API URL and admin token in `js/script.js`.
-
-## Deployment
-
-The project can be deployed to any cloud provider that supports Node.js and MySQL.
-
-1.  Deploy the backend to a server (e.g., AWS EC2, Heroku).
-2.  Set up a production database and update the backend's environment variables.
-3.  Build and deploy the miniprogram through the WeChat DevTools.
-4.  Deploy the admin panel to a static hosting service (e.g., AWS S3, Netlify).
+当前开始承载 **「乒乓球馆教务核销系统」** 的代码与文档（Node.js 后端 + 管理后台 + 小程序前端骨架）。
 
 ---
 
-This concludes the development of the Ping Pong Gym Management System. The system is now fully functional with a backend, a miniprogram frontend, and an admin frontend.
+# 乒乓球馆教务核销系统
+
+这是一个乒乓球馆课程排课与扫码核销的全栈 Demo：
+
+## 目录结构
+- `backend/`：Node.js + Express 后端
+- `frontend-admin/`：管理后台（静态页面 + JS 调接口）
+- `frontend-miniprogram/`：微信小程序前端（骨架）
+- `design/`：数据库与 API 设计文档
+- `schema.sql`：数据库建表脚本
+
+## 本地运行（后端）
+1. `cd backend`
+2. `npm install`
+3. 配置 `.env`（微信登录与数据库参数）
+4. 执行 `schema.sql` 建表
+5. `npm run dev`
+
+---
+
+# hello-java（历史示例）
+
+```bash
+javac HelloWorld.java
+java HelloWorld
+```
