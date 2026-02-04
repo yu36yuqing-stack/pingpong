@@ -1,0 +1,4 @@
+<view class="container">
+  <button bindtap="testNetwork">测试网络连接</button>
+  <text>{{result}}</text>
+</view>

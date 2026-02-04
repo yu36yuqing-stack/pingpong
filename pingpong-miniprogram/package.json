@@ -1,0 +1,12 @@
+{
+  "name": "pingpong-miniprogram-tools",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Tooling for uploading WeChat miniprogram demo",
+  "scripts": {
+    "upload": "node scripts/wx-upload.mjs"
+  },
+  "dependencies": {
+    "miniprogram-ci": "^2.1.15"
+  }
+}
